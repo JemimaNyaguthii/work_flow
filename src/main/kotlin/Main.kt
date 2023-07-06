@@ -1,7 +1,10 @@
 fun main() {
     oddNumbers()
    println(  things(arrayOf("music","flowers","pen","nature","cup")))
+    serving(4)
+    serving(13)
     serving(20)
+    serving(6)
     multiples()
 
 
@@ -22,9 +25,9 @@ fun oddNumbers() {
 fun things(name:Array<String>):Int{
     var myThings=0
          for(num in name)
-             if (num.length > 5){
+             if (num.length > 5)
                  ++myThings
-             }
+
     return myThings
 
     }
@@ -36,7 +39,7 @@ fun things(name:Array<String>):Int{
 //    their age.
 fun serving(age:Int) {
     when (age) {
-        in 1..6 -> println("glass of milk")
+        in 1..5-> println("glass of milk")
         in 7..14 -> println("botte of fanta")
         else -> println("bottle of coca cola")
     }
@@ -47,15 +50,16 @@ fun serving(age:Int) {
 //5, print "FizzBuzz" instead of the number.
 fun multiples() {
     for (b in 1..100) {
+
+         if (b % 3 == 0  && 5 == 0) {
+            println("FizzBuzz")
+        }
         if (b%3==0) {
             println("Fizz")
         }
         else if (b%5==0){
             println("Buzz")
         }
-        else if (b % 3 == 0 || b % 5 == 0) {
-                println("FizzBuzz")
-            }
         else{
             println(b)
         }
